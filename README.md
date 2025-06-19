@@ -18,6 +18,8 @@ have made during the input process. This code is clear and understandable.
 This the code doe the Detail View Screen, this code collects all the data from the previous page that has been entered by the user.
 This code has feedback messages to the user if the required data is not there.
 This page also displays the data enetered and on this page the data cannot be changed.
+![prac-cp1](https://github.com/user-attachments/assets/965e641c-9887-41be-85b7-7dac747722ac)
+This code is to store data and release it when needed,
 
 
 
