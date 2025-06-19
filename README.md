@@ -12,7 +12,12 @@ the last button is to restart the application, navigationg back to the first pag
 This the code for the Main screen, this code stores all input information by user in arrays.
 This code also has buttons which show their different functions.
 This code also has two if-statements with error handling messages. the reason the if statements are separated is so user has a clear feedback on errors they
-have made during the input process.
+have made during the input process. This code is clear and understandable.
+![prac-cd1](https://github.com/user-attachments/assets/719ea15b-03ed-4d26-9a89-5620560d859b)
+![prac-cd2](https://github.com/user-attachments/assets/180253a4-5fed-47b3-9b2a-381242b07998)
+This the code doe the Detail View Screen, this code collects all the data from the previous page that has been entered by the user.
+This code has feedback messages to the user if the required data is not there.
+This page also displays the data enetered and on this page the data cannot be changed.
 
 
 
