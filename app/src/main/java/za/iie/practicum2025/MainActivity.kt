@@ -59,14 +59,14 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Please enter a valid name, artist, quantity and comment", Toast.LENGTH_SHORT).show()
             }
-            if (artist.isNotBlank() && comment.isNotBlank() ) {
+           /* if (artist.isNotBlank() && comment.isNotBlank() ) {
                 packingList.add(PackingItem(artist, quantity))
                 Toast.makeText(this, "Item added", Toast.LENGTH_SHORT).show()
                 artistInput.text.clear()
                 commentInput.text.clear()
             }else {
                 Toast.makeText(this, "PLease enter valid artist name and comment", Toast.LENGTH_SHORT).show()
-            }
+            } */
         }
         // separated these two if statements to make the feedback more clear on where the input error is
 
