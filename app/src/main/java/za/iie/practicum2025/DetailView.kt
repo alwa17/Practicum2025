@@ -1,10 +1,13 @@
-package za.iie.practicum2025
+package com.example.practicum2025
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import za.iie.practicum2025.R
 
 class DetailView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +18,21 @@ class DetailView : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        findViewById<Button>(R.id.btnShowAll).setOnClickListener {
+            val list = MainActivity.packingList
+            val msg = list.joinToString("\n") { "${it.name} (x${it.rating})" }
+            Toast.makeText(this, msg.ifEmpty { "List is empty" }, Toast.LENGTH_LONG).show()
+        }
+
+        findViewById<Button>(R.id.btnShowFiltered).setOnClickListener {
+            val filtered = MainActivity.packingList.filter { it.rating >= 2 }
+            val msg = filtered.joinToString("\n") { "${it.name} (x${it.rating})" }
+            Toast.makeText(this, msg.ifEmpty { "No items with quantity ≥ 2" }, Toast.LENGTH_LONG).show()
+        }
+
+        findViewById<Button>(R.id.btnReturn).setOnClickListener {
+            finish()
         }
     }
 }
