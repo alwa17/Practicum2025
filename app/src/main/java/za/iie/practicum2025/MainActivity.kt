@@ -73,7 +73,8 @@ class MainActivity : AppCompatActivity() {
         nextScreenButton.setOnClickListener {
             startActivity(Intent(this, DetailView::class.java))
         }
-        // button that navigates to the next screen (deatil view)
+        // button that navigates to the next screen (detail view)
+
 
         exitButton.setOnClickListener {
             finishAffinity()
