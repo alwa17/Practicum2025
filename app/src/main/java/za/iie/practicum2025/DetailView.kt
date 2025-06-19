@@ -21,13 +21,13 @@ class DetailView : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btnShowAll).setOnClickListener {
             val list = MainActivity.packingList
-            val msg = list.joinToString("\n") { "${it.name} (x${it.rating})" }
+            val msg = list.joinToString("\n") { "${it.name} (x${it.quantity})" }
             Toast.makeText(this, msg.ifEmpty { "List is empty" }, Toast.LENGTH_LONG).show()
         }
 
         findViewById<Button>(R.id.btnShowFiltered).setOnClickListener {
-            val filtered = MainActivity.packingList.filter { it.rating >= 2 }
-            val msg = filtered.joinToString("\n") { "${it.name} (x${it.rating})" }
+            val filtered = MainActivity.packingList.filter { it.quantity >= 2 }
+            val msg = filtered.joinToString("\n") { "${it.name} (x${it.quantity})" }
             Toast.makeText(this, msg.ifEmpty { "No items with quantity ≥ 2" }, Toast.LENGTH_LONG).show()
         }
 
