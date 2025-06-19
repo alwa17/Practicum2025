@@ -24,7 +24,7 @@ class DetailView : AppCompatActivity() {
             val msg = list.joinToString("\n") { "${it.name} (x${it.quantity})" }
             Toast.makeText(this, msg.ifEmpty { "List is empty" }, Toast.LENGTH_LONG).show()
         }
-        // decleartion of the inputs to allow calculation
+        // declaration of the inputs to allow calculation
 
         findViewById<Button>(R.id.btnShowFiltered).setOnClickListener {
             val filtered = MainActivity.packingList.filter { it.quantity >= 2 }
