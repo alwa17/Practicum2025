@@ -24,15 +24,18 @@ class DetailView : AppCompatActivity() {
             val msg = list.joinToString("\n") { "${it.name} (x${it.quantity})" }
             Toast.makeText(this, msg.ifEmpty { "List is empty" }, Toast.LENGTH_LONG).show()
         }
+        // decleartion of the inputs to allow calculation
 
         findViewById<Button>(R.id.btnShowFiltered).setOnClickListener {
             val filtered = MainActivity.packingList.filter { it.quantity >= 2 }
             val msg = filtered.joinToString("\n") { "${it.name} (x${it.quantity})" }
             Toast.makeText(this, msg.ifEmpty { "No items with quantity ≥ 2" }, Toast.LENGTH_LONG).show()
         }
+        // this function is to filter the ratings to a average as required
 
         findViewById<Button>(R.id.btnReturn).setOnClickListener {
             finish()
         }
+        // button to go back to the MainActivity screen
     }
 }
